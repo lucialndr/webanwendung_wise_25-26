@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Homepage</h1>
+        <h1>Hotel...</h1>
         <p>Lorum Ipsum</p>
         <NuxtLink to="/impressum">Impressum</NuxtLink>
     </div>
