@@ -2,6 +2,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     srcDir: 'app/',
     modules: ['@nuxtjs/tailwindcss'],
+    css: ['~/assets/css/tailwind.css'],
     app: {
     head: {
         title: 'Mein Shop',
