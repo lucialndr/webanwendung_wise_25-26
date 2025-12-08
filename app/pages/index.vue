@@ -1,11 +1,9 @@
 <template>
     <!-- HEADER -->
     <header class="max-w-4xl mx-auto text-center mt-10 px-4">
-      <h1 class="text-4xl font-bold italic bg-gray-400 text-black-600">
-        Hotel ...
-      </h1>
+      <h1 class="font-serif text-4xl">Hotel ...</h1>
       <p class="mt-5 text-lg text-gray-600">
-        Das schönste Hotel im Raum ...
+        Das schönste Hotel im Raum Hamburg
       </p>
       <hr class="my-8">
     </header>
@@ -20,7 +18,7 @@
             alt="Artikel 1"
           >
           <div class="p-6">
-            <h2 class="text-xl font-semibold mb-2">Artikel 1</h2>
+            <h2 class="text-xl font-serif mb-2">Artikel 1</h2>
             <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet...</p>
             <a href="#" class="inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
               Weiterlesen
