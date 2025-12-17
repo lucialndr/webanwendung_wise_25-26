@@ -1,5 +1,5 @@
 <template>
-    <!-- HEADER -->
+    <!-- Header -->
     <header class="max-w-4xl mx-auto text-center mt-10 px-4">
       <h1 class="font-serif text-4xl">Hotel ...</h1>
       <p class="mt-5 text-lg text-gray-600">
@@ -8,7 +8,7 @@
       <hr class="my-8">
     </header>
     
-    <!-- INHALT -->
+    <!-- Inhalt -->
     <section class="max-w-6xl mx-auto px-4 py-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-white rounded-xl shadow-md overflow-hidden">

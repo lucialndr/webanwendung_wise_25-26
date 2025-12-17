@@ -32,6 +32,6 @@
   p {
     font-size: 16px;
     line-height: 1.8;
-    color: #4b5563; /* grau */
+    color: #4b5563; 
   }
   </style>

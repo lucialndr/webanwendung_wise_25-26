@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     css: ['~/assets/css/tailwind.css'],
     app: {
     head: {
-        title: 'Mein Shop',
+        title: 'Hotel ...',
         meta: [
-            { name: 'description' , content: 'Tolle Dinge bei uns' }
+            { name: 'description' , content: 'Hotel ... in Hamburg' }
         ],
         link: [
             { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' }

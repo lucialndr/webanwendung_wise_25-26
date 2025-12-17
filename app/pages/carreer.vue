@@ -45,7 +45,7 @@
             >
           </div>
   
-          <!-- PLZ, Ort -->
+          <!-- Ort und PLZ -->
           <div class="mb-6">
             <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
               PLZ, Ort
@@ -60,7 +60,7 @@
             >
           </div>
   
-          <!--  Telefon  -->
+          <!--  Telefon und Email -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             
             <!-- Telefonnummer -->
@@ -79,7 +79,7 @@
               >
             </div>
   
-            <!-- E-Mail -->
+            <!-- Email -->
             <div>
               <label for="em" class="block text-sm font-semibold text-gray-700 mb-2">
                 E-Mail *
@@ -132,10 +132,10 @@
                 <input 
                   type="radio" 
                   name="stelle" 
-                  value="Werkstudent" 
+                  value="Mini-Job" 
                   class="w-4 h-4 text-gray-800 focus:ring-gray-800"
                 >
-                <span class="ml-3 text-gray-700">Werkstudent</span>
+                <span class="ml-3 text-gray-700">Mini-Job</span>
               </label>
   
               <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition">
@@ -207,7 +207,7 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <button 
               type="submit" 
-              class="flex-1 bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              class="flex-1 bg-stone-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-stone-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Bewerbung absenden
             </button>
