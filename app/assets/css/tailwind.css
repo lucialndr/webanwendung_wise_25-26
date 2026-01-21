@@ -2,22 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-gray-50
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-sans text-foreground;
+  }
 }
 
 @layer components {
-    .btn {
-        @apply bg-[#229922] text-white px-3 py-2 rounded-md;
-    }
-}
+  .btn {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition;
+  }
 
-@layer components {
-    .btn {
-    @apply bg-[#229922] text-white px-3 py-2 rounded-md text-sm text-white;
-}
-
-.card {
-    @apply p-3 rounded-md bg-white shadow-md h-full;
-    }
+  .card {
+    @apply p-4 rounded-md bg-white shadow-md h-full border border-border;
+  }
 }

@@ -5,7 +5,7 @@
         <!-- Header -->
         <header class="text-center mb-10">
           <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-3">
-            Hotel ...
+            Hotel Excellence
           </h1>
           <p class="text-xl text-gray-600">Kontaktformular</p>
           <div class="w-24 h-1 bg-gray-800 mx-auto mt-4"></div>

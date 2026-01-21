@@ -1,18 +1,46 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: { enabled: true },
-    srcDir: 'app/',
-    modules: ['@nuxtjs/tailwindcss'],
-    css: ['~/assets/css/tailwind.css'],
-    app: {
+  compatibilityDate: '2026-01-09',
+  srcDir: 'app/',
+  css: ['~/assets/css/tailwind.css'],
+  modules: ['@nuxtjs/tailwindcss'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  app: {
     head: {
-        title: 'Hotel ...',
-        meta: [
-            { name: 'description' , content: 'Hotel ... in Hamburg' }
-        ],
-        link: [
-            { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' }
-    
-        ]
-        }
-    }
+      title: 'Hotel Excellence',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'description',
+          content: 'Luxushotel mit Karriere, Zimmer und Restaurant.',
+        },
+      ],
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap',
+        },
+      ],
+    },
+  },
+  typescript: {
+    shim: false,
+  },
+  devtools: {
+    enabled: true,
+  },
 })
