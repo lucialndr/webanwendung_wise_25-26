@@ -177,12 +177,12 @@
                 <p class="mb-4 text-sm text-white/90">
                   Bewirb dich jetzt und werde Teil unseres Teams!
                 </p>
-                <NuxtLink
-                  to="/carreer"
-                  class="block w-full rounded bg-white px-6 py-3 text-center font-semibold text-primary transition hover:bg-white/90"
+                <button
+                  @click="goToApplication"
+                  class="w-full rounded bg-white px-6 py-3 text-center font-semibold text-primary transition hover:bg-white/90 border-none cursor-pointer"
                 >
-                  Jetzt bewerben
-                </NuxtLink>
+                Jetzt bewerben
+                </button>
               </div>
 
               <!-- Kontakt -->
@@ -308,4 +308,19 @@ useHead({
     { name: 'description', content: job.value?.description || 'Karriere bei Hotel Excellence' }
   ]
 })
+
+const router = useRouter()
+
+const goToApplication = () => {
+  // Job-Daten in sessionStorage speichern
+  if (job.value) {
+    sessionStorage.setItem('selectedJob', JSON.stringify({
+      slug: job.value.slug,
+      title: job.value.title,
+      department: job.value.department
+    }))
+  }
+  // Dann zur Formularseite navigieren
+  router.push('/carreerForm')
+}
 </script>

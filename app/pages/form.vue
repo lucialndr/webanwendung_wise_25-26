@@ -7,9 +7,26 @@
           <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-3">
             Hotel Excellence
           </h1>
-          <p class="text-xl text-gray-600">Kontaktformular</p>
+          <p class="text-xl text-gray-600">Bewerbungsformular</p>
           <div class="w-24 h-1 bg-gray-800 mx-auto mt-4"></div>
         </header>
+
+        <!-- Job-Info aus sessionStorage -->
+        <div v-if="selectedJob" class="mb-8 p-6 bg-blue-50 border border-blue-200 rounded-lg">
+          <div class="flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-1">Bewerbung für:</p>
+              <h2 class="text-2xl font-bold text-gray-900">{{ selectedJob.title }}</h2>
+              <p class="text-sm text-gray-600 mt-2">Abteilung: {{ selectedJob.department }}</p>
+            </div>
+            <button
+              @click="goBackToJob"
+              class="px-4 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition"
+            >
+              ← Zurück zur Stellenbeschreibung
+            </button>
+          </div>
+        </div>
   
         <!-- Formular -->
         <form action="antwort_formular.php" method="post" class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
@@ -20,6 +37,7 @@
               Name *
             </label>
             <input 
+              v-model="formData.name"
               type="text" 
               id="name" 
               name="nn" 
@@ -36,6 +54,7 @@
               Straße
             </label>
             <input 
+              v-model="formData.street"
               type="text" 
               id="street" 
               name="street" 
@@ -51,6 +70,7 @@
               PLZ, Ort
             </label>
             <input 
+              v-model="formData.city"
               type="text" 
               id="city" 
               name="city" 
@@ -69,6 +89,7 @@
                 Telefon / Mobil *
               </label>
               <input 
+                v-model="formData.tel_number"
                 type="tel" 
                 id="telp" 
                 name="tel_number" 
@@ -85,6 +106,7 @@
                 E-Mail *
               </label>
               <input 
+                v-model="formData.mail"
                 type="email" 
                 id="em" 
                 name="mail" 
@@ -103,6 +125,7 @@
               Geburtsdatum
             </label>
             <input 
+              v-model="formData.birth_date"
               type="date" 
               id="da" 
               name="birth_date" 
@@ -119,6 +142,7 @@
             <div class="space-y-3">
               <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition">
                 <input 
+                  v-model="formData.stelle"
                   type="radio" 
                   name="stelle" 
                   value="Praktikum" 
@@ -130,6 +154,7 @@
   
               <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition">
                 <input 
+                  v-model="formData.stelle"
                   type="radio" 
                   name="stelle" 
                   value="Mini-Job" 
@@ -140,6 +165,7 @@
   
               <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition">
                 <input 
+                  v-model="formData.stelle"
                   type="radio" 
                   name="stelle" 
                   value="Vollzeit_Stelle" 
@@ -150,24 +176,16 @@
             </div>
           </div>
   
-          <!-- Abteilung auswählen  -->
-          <div class="mb-6">
-            <label for="abteilung" class="block text-sm font-semibold text-gray-700 mb-2">
-              Abteilung *
-            </label>
-            <select 
-              name="abteilung" 
-              id="abteilung" 
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-800 focus:border-transparent transition bg-white"
-              required
-            >
-              <option value="">Bitte wählen...</option>
-              <option value="Küche">Küche</option>
-              <option value="Service">Service</option>
-              <option value="Management">Management</option>
-              <option value="Marketing">Marketing</option>
-            </select>
-          </div>
+          <!-- Geschlecht -->
+        <p>Geschlecht:</p>
+        <p>
+            <input type="radio" name="geschlecht" id="r1" value="m">
+            <label for="r1">Männlich</label><br>
+            <input type="radio" name="geschlecht" id="r2" value="w">
+            <label for="r2">Weiblich</label><br>
+            <input type="radio" name="geschlecht" id="r3" value="d">
+            <label for="r3">Divers</label>
+        </p>
   
           <!-- Newsletter -->
           <div class="mb-6">
@@ -177,6 +195,7 @@
             
             <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition">
               <input 
+                v-model="formData.newsletter"
                 type="checkbox" 
                 name="newsletter" 
                 value="Ja" 
@@ -192,6 +211,7 @@
               Ihr Motivationsschreiben *
             </label>
             <textarea 
+              v-model="formData.txt"
               name="txt" 
               id="txt" 
               rows="8" 
@@ -235,6 +255,52 @@
   </template>
   
   <script setup>
+
+    import { ref, onMounted, watch, reactive } from 'vue'
+    import { useRouter } from 'nuxt/app'
+
+    const router = useRouter()
+    const selectedJob = ref(null)
+
+    // Reaktives Objekt für Formular-Daten
+    const formData = reactive({
+      name: '',
+      street: '',
+      city: '',
+      tel_number: '',
+      mail: '',
+      birth_date: '',
+      stelle: '',
+      abteilung: '',
+      newsletter: false,
+      txt: ''
+    })
+
+    // Watcher: Speichert Formular-Daten automatisch in sessionStorage
+    watch(formData, (newValue) => {
+      sessionStorage.setItem('formData', JSON.stringify(newValue))
+    }, { deep: true })
+
+    onMounted(() => {
+      // Job-Daten aus sessionStorage laden
+      const stored = sessionStorage.getItem('selectedJob')
+      if (stored) {
+        selectedJob.value = JSON.parse(stored)
+      }
+
+      // Gespeicherte Formular-Daten laden
+      const savedFormData = sessionStorage.getItem('formData')
+      if (savedFormData) {
+        const data = JSON.parse(savedFormData)
+        Object.assign(formData, data)
+      }
+    })
+
+    const goBackToJob = () => {
+      if (selectedJob.value?.slug) {
+        router.push(`/jobs/${selectedJob.value.slug}`)
+      }
+    }
   </script>
   
   <style scoped>
