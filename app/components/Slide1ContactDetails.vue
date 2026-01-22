@@ -32,7 +32,7 @@
         <!-- Slide Überschrift -->
         <h3 class="text-2xl font-bold text-gray-900">Kontaktdaten</h3>
         <!-- Formular -->
-        <form action="antwort_formular.php" method="post" class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+        <form class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
           <!-- Geschlecht -->
           <div class="mb-6">
             <label for="geschlecht" class="block text-sm font-semibold text-gray-700 mb-2">
