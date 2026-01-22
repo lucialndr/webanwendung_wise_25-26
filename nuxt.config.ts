@@ -3,13 +3,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-09',
   srcDir: 'app/',
   css: ['~/assets/css/tailwind.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss'],  // Nur Tailwind, kein Supabase
+  
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+  
   app: {
     head: {
       title: 'Hotel Excellence',
@@ -37,10 +39,19 @@ export default defineNuxtConfig({
       ],
     },
   },
+  
   typescript: {
     shim: false,
   },
+  
   devtools: {
     enabled: true,
+  },
+  
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY
+    }
   },
 })
