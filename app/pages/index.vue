@@ -1,7 +1,7 @@
 <template>
   <main class="bg-background text-foreground">
     <!-- Hero -->
-    <section class="relative h-[90vh] w-full overflow-hidden">
+    <section class="relative h-[100vh] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1600&q=80"
         alt="Luxuriöser Hotellobby"
@@ -221,7 +221,7 @@
         </p>
 
         <div class="mb-12 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a href="mailto:karriere@hotel-excellence.de" class="btn bg-white text-primary hover:bg-white/90">
+          <a href="#jobs" class="btn bg-white text-primary hover:bg-white/90">
             Jetzt bewerben
           </a>
           <a

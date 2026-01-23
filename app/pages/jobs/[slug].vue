@@ -3,7 +3,7 @@
     <!-- Job Header -->
     <section class="bg-primary px-6 py-16 text-white md:px-12">
       <div class="mx-auto max-w-4xl">
-        <NuxtLink to="/" class="mb-6 inline-flex items-center gap-2 text-white/80 hover:text-white transition">
+        <NuxtLink to="/#jobs" class="mb-6 inline-flex items-center gap-2 text-white/80 hover:text-white transition">
           ← Zurück zu allen Positionen
         </NuxtLink>
         
