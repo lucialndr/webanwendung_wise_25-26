@@ -12,12 +12,20 @@
       <div class="relative z-10 flex h-full flex-col">
         <nav class="flex items-center justify-between px-6 py-6 md:px-12">
           <span class="text-white tracking-[0.2em] text-sm md:text-base">HOTEL EXCELLENCE</span>
-          <a
-            href="#jobs"
-            class="rounded border border-white/40 px-5 py-2 text-white hover:bg-white/10 backdrop-blur transition"
-          >
-            Jetzt bewerben
-          </a>
+          <div class="flex items-center gap-3">
+            
+              <a href="#jobs"
+              class="rounded border border-white/40 px-5 py-2 text-white hover:bg-white/10 backdrop-blur transition"
+            >
+              Jetzt bewerben
+            </a>
+            <NuxtLink
+              to="/admin/login"
+              class="rounded border border-white/40 px-5 py-2 text-white hover:bg-white/10 backdrop-blur transition flex items-center gap-2"
+            >
+              <span class="hidden sm:inline">Login</span>
+            </NuxtLink>
+          </div>
         </nav>
 
         <div class="flex flex-1 flex-col items-center justify-center px-6 text-center md:px-12">

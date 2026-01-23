@@ -93,7 +93,7 @@
         </div>
       </div>
 
-      <!-- Passwort momentan noch nicht nötig-->
+      <!-- Passwort für User momentan noch nicht nötig-->
       <!--
       <div class="mb-6">
         <label for="passwort" class="block text-sm font-semibold text-gray-700 mb-2">

@@ -2,11 +2,11 @@
     <div class="impressum-container font-serif">
       <h1>Impressum</h1>
       <p>
-        Hotel ...<br>
+        Hotel Excellence<br>
         Neuer Jungfernstieg 9 - 14<br>
         20354 Hamburg, Germany<br>
         Telefon +49 (0) 40 34 94 0<br>
-        hamburg@hotel.com
+        hotel@Excellence.com
       </p>
     </div>
   </template>
