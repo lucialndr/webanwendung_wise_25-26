@@ -156,7 +156,6 @@
                     @click="sendEmail(selectedBewerbung)"
                     class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition flex items-center gap-2"
                 >
-                    <span>📧</span>
                     E-Mail senden
                 </button>
             </div>
