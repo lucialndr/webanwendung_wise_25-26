@@ -2,6 +2,9 @@
 <br> admin@hotelexcellence.de <br> vonpoW-fosdaz-xehpo0
 
 
+# Supabase wird für die Datenbank verwendet
+
+
 
 # Nuxt Minimal Starter
 
