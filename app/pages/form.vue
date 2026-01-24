@@ -179,14 +179,14 @@
           <!-- Geschlecht -->
         <p>Geschlecht:</p>
         <p>
-            <input type="radio" name="geschlecht" id="r1" value="m">
-            <label for="r1">Männlich</label><br>
-            <input type="radio" name="geschlecht" id="r2" value="w">
-            <label for="r2">Weiblich</label><br>
-            <input type="radio" name="geschlecht" id="r3" value="d">
-            <label for="r3">Divers</label>
+            <input v-model="formData.geschlecht" type="radio" name="geschlecht" id="r1" value="m">
+            <label for="r1"> Männlich</label><br>
+            <input v-model="formData.geschlecht" type="radio" name="geschlecht" id="r2" value="w">
+            <label for="r2"> Weiblich</label><br>
+            <input v-model="formData.geschlecht" type="radio" name="geschlecht" id="r3" value="d">
+            <label for="r3"> Divers</label>
         </p>
-  
+
           <!-- Newsletter -->
           <div class="mb-6">
             <label class="block text-sm font-semibold text-gray-700 mb-3">
@@ -271,6 +271,7 @@
       mail: '',
       birth_date: '',
       stelle: '',
+      geschlecht: '',
       abteilung: '',
       newsletter: false,
       txt: ''

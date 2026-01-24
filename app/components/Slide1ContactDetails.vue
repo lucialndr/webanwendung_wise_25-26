@@ -39,11 +39,11 @@
               Geschlecht
             </label>
             <input  type="radio" name="geschlecht" id="r1" value="m">
-            <label for="r1">Männlich</label><br>
+            <label for="r1"> Männlich</label><br>
             <input type="radio" name="geschlecht" id="r2" value="w">
-            <label for="r2">Weiblich</label><br>
+            <label for="r2"> Weiblich</label><br>
             <input type="radio" name="geschlecht" id="r3" value="d">
-            <label for="r3">Divers</label>
+            <label for="r3"> Divers</label>
           </div>
 
           <!-- Name -->

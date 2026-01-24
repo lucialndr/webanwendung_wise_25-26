@@ -23,8 +23,9 @@
               <option value="Abitur">Abitur</option>
               <option value="Bachelor">Bachelor</option>
               <option value="Master">Master</option>
+              <option value="Promotion">Promotion</option>
               <option value="Ausbildung">Ausbildung</option>
-              <option value="SSonstiges">Sonstiges</option>
+              <option value="Sonstiges">Sonstiges</option>
             </select>
           </div>
           <!-- Berufserfahrung -->
