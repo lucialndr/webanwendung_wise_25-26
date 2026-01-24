@@ -5,8 +5,10 @@ Gruppe C: Caroline Kühl, Marla Höpfner, Lucia Linder
 <br> admin@hotelexcellence.de <br> vonpoW-fosdaz-xehpo0
 
 
-# Supabase wird für die Datenbank verwendet
+## Supabase wird für die Datenbank verwendet
 <br>
+
+## Wir haben Figma für das Design der Webseite verwendet.
 
 
 
