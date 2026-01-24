@@ -1,4 +1,5 @@
-# Recruting Webpräsenz eines Hotels
+# Recruting Webpräsenz eines Hotels: <br>
+Gruppe C: Caroline Kühl, Marla Höpfner, Lucia Linder
 
 # Admin-Login: 
 <br> admin@hotelexcellence.de <br> vonpoW-fosdaz-xehpo0
