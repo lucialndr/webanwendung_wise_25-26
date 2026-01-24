@@ -6,7 +6,7 @@ Gruppe C: Caroline Kühl, Marla Höpfner, Lucia Linder
 
 
 ## Supabase wird für die Datenbank verwendet
-## Wir haben Figma für das Design der Webseite verwendet
+## Wir haben Figma für das Design der Webseite benutzt
 <br>
 
 
