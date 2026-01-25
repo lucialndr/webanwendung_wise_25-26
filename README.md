@@ -5,7 +5,7 @@ Gruppe C: Caroline Kühl, Marla Höpfner, Lucia Linder
 
 # Admin-Login: 
 <br> admin@hotelexcellence.de <br> vonpoW-fosdaz-xehpo0
-# Inhalt der .env Datei: <br>
+# Inhalt der .env Datei (nicht an 3. weitergeben): <br>
 SUPABASE_URL=https://ystoiyaymnwmzgiaqstq.supabase.co <br>
 SUPABASE_ANON_KEY=sb_publishable_Xe1BIxiFxsjAz3xcRXleIQ_aRLrUQxI 
 
