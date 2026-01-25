@@ -1,6 +1,8 @@
 # Recruting Webpräsenz eines Hotels: <br>
 Gruppe C: Caroline Kühl, Marla Höpfner, Lucia Linder
 
+# Achtung: Im Zip-Archiv ist unser gesamter Source-Code + Database Dump, unter https://webanwendung-wise-25-26.vercel.app sollte die Webseite auch erreichbar sein.
+
 # Admin-Login: 
 <br> admin@hotelexcellence.de <br> vonpoW-fosdaz-xehpo0
 
